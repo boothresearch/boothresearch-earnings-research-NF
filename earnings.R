@@ -5,3 +5,8 @@ fitted.model <- lm(earnings$earn ~ earnings$height)
 print(Sys.time(), quote = FALSE)
 print(summary(fitted.model))
 closeAllConnections()
+
+png("reg01.png")
+plot(earnings$height, earnings$earn)
+abline(fitted.model)
+dev.off()
